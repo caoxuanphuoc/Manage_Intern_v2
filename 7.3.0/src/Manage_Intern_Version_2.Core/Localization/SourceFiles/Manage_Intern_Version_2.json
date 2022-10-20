@@ -5,6 +5,7 @@
     "ChangeLanguage": "Change language",
     "HomePage": "HomePage",
     "About": "About",
+    "ListUser":  "List User",
     "Home_Description": "Welcome to Manage_Intern_Version_2...",
     "About_Description": "This is a simple startup template to use ASP.NET Core with ABP framework."
   }

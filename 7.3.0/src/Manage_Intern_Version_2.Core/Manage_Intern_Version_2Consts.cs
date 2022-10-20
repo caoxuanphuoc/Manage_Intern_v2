@@ -9,6 +9,6 @@
         /// <summary>
         /// Default pass phrase for SimpleStringCipher decrypt/encrypt operations
         /// </summary>
-        public const string DefaultPassPhrase = "029f8e97d3dc44ef9f6c46a697c523b8";
+        public const string DefaultPassPhrase = "c7ce1e2956184d338dea3467eedbb19e";
     }
 }

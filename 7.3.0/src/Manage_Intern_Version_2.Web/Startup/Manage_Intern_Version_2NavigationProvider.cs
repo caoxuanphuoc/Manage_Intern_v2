@@ -1,5 +1,7 @@
 ﻿using Abp.Application.Navigation;
 using Abp.Localization;
+using System.Drawing;
+using System.Security.Policy;
 
 namespace Manage_Intern_Version_2.Web.Startup
 {
@@ -23,6 +25,13 @@ namespace Manage_Intern_Version_2.Web.Startup
                         PageNames.About,
                         L("About"),
                         url: "Home/About",
+                        icon: "fa fa-info"
+                        )
+                ).AddItem(
+                    new MenuItemDefinition(
+                        PageNames.ListUser,
+                        L("ListUser"),
+                        url: "Users",
                         icon: "fa fa-info"
                         )
                 );
