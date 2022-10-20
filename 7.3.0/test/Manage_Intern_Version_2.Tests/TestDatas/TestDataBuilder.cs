@@ -1,4 +1,5 @@
 using Manage_Intern_Version_2.EntityFrameworkCore;
+using Manage_Intern_Version_2.Users;
 
 namespace Manage_Intern_Version_2.Tests.TestDatas
 {
@@ -13,7 +14,10 @@ namespace Manage_Intern_Version_2.Tests.TestDatas
 
         public void Build()
         {
-            //create test data here...
+            _context.Users.AddRange(
+           new User("XuanPhuoc", "123","cao Phuoc", "0345757092", "caophuoc6@gmail.com"),
+           new User("XuanPhuoc2", "1233", "cao Phuoc", "0345757092", "caophuoc7@gmail.com")
+           );
         }
     }
 }
