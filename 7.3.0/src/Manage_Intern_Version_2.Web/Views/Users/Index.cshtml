@@ -1,0 +1,26 @@
+﻿@using Manage_Intern_Version_2.Web.Startup
+@model Manage_Intern_Version_2.Web.Models.User.UserViewModel
+
+@{
+    ViewBag.Title = L("UserList");
+    ViewBag.ActiveMenu = "UserList"; //Matches with the menu name in SimpleTaskAppNavigationProvider to highlight the menu item
+}
+
+<h2>@L("UserList")</h2>
+
+<div class="row">
+    <div>
+        <ul class="list-group" id="TaskList">
+            @foreach (var user in Model.Users)
+            {
+                <li class="list-group-item">
+                    <span>@user.FullName</span>
+                    <h4 class="list-group-item-heading">@user.PhoneNumber</h4>
+                    <div class="list-group-item-text">
+                        @user.Gmail
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
