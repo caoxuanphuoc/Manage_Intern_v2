@@ -30,9 +30,9 @@ namespace Manage_Intern_Version_2.Web.Startup
                 ).AddItem(
                     new MenuItemDefinition(
                         PageNames.ListUser,
-                        L("ListUser"),
+                        L("UserList"),
                         url: "Users",
-                        icon: "fa fa-info"
+                        icon: "fa fa-list"
                         )
                 );
         }
