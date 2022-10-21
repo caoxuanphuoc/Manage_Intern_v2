@@ -8,19 +8,28 @@
 
 <h2>@L("UserList")</h2>
 
-<div class="row">
-    <div>
-        <ul class="list-group" id="TaskList">
-            @foreach (var user in Model.Users)
-            {
-                <li class="list-group-item">
-                    <span>@user.FullName</span>
-                    <h4 class="list-group-item-heading">@user.PhoneNumber</h4>
-                    <div class="list-group-item-text">
-                        @user.Gmail
-                    </div>
-                </li>
-            }
-        </ul>
-    </div>
-</div>
+<table class="table">
+   <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Họ Và Tên</th>
+      <th scope="col">Gmail</th>
+      <th scope="col">SĐT</th>
+    </tr>
+  </thead>
+  <tbody>
+     @{
+         int stt = 0;
+         @foreach (var user in Model.Users){
+                stt++;
+                <tr>
+                  <th scope="row">@stt</th>
+                  <td>@user.FullName</td>
+                  <td>@user.Gmail</td>
+                  <td>@user.PhoneNumber</td>
+                </tr>
+    }
+    }
+  </tbody>
+</table>
+
