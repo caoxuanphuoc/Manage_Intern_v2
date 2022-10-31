@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 
 namespace Manage_Intern_Version_2.Web.Startup
 {
@@ -35,6 +36,11 @@ namespace Manage_Intern_Version_2.Web.Startup
             {
                 options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
             }).AddNewtonsoftJson();
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo { Title = "AbpZeroTemplate API", Version = "v1" });
+                options.DocInclusionPredicate((docName, description) => true);
+            });
 
             //Configure Abp and Dependency Injection
             return services.AddAbp<Manage_Intern_Version_2WebModule>(options =>
@@ -53,6 +59,12 @@ namespace Manage_Intern_Version_2.Web.Startup
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
             app.UseAbp(); //Initializes ABP framework.
+            app.UseSwagger();
+            //Enable middleware to serve swagger - ui assets(HTML, JS, CSS etc.)
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "AbpZeroTemplate API V1");
+            });
 
             if (env.IsDevelopment())
             {
