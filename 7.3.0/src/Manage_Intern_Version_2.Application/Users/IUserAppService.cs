@@ -12,5 +12,6 @@ namespace Manage_Intern_Version_2.Users
     public interface IUserAppService : IApplicationService
     {
         Task<ListResultDto<UserListDto>> GetAll();
+        System.Threading.Tasks.Task Create(CreateUserInput input);
     }
 }

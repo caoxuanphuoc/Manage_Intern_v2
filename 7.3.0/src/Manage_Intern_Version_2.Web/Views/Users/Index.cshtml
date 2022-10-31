@@ -7,12 +7,13 @@
 }
 
 <h2>@L("UserList")</h2>
-
+<a class="btn btn-primary btn-sm" asp-action="Create">@L("NewUser")</a>
 <table class="table">
    <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Họ Và Tên</th>
+      <th scope="col">User Name</th>
+      <th scope="col">Created At</th>
       <th scope="col">Gmail</th>
       <th scope="col">SĐT</th>
     </tr>
@@ -24,7 +25,8 @@
                 stt++;
                 <tr>
                   <th scope="row">@stt</th>
-                  <td>@user.FullName</td>
+                  <td>@user.UserName</td>
+                    <td>@user.CreatedAt</td>
                   <td>@user.Gmail</td>
                   <td>@user.PhoneNumber</td>
                 </tr>

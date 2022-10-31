@@ -35,5 +35,17 @@
       "wwwroot/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js",
       "wwwroot/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js"
     ]
+  },
+  {
+    "outputFileName": "wwwroot/js/views/users/Create.min.js",
+    "inputFiles": [
+      "wwwroot/js/views/users/Create.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/jquery-extensions.min.js",
+    "inputFiles": [
+      "wwwroot/js/jquery-extensions.js"
+    ]
   }
 ]

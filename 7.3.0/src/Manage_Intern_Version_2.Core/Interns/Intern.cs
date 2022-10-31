@@ -15,6 +15,7 @@ namespace Manage_Intern_Version_2.Interns
     public class Intern : Entity
     {
         [ForeignKey("UserId")]
+        public int UserId { get; set; }
         public User User { get; set; }
         [Required]
         [MaxLength(50)]
@@ -25,9 +26,11 @@ namespace Manage_Intern_Version_2.Interns
         public DateTime StartDay { get; set; }
         public DateTime EndDay { get; set; }
 
-        public Intern()
+        public Intern(int id)
         {
+            UserId = id;
             StartDay = Clock.Now;
         }
+
     }
 }

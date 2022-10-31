@@ -11,7 +11,8 @@ namespace Manage_Intern_Version_2.Users.Dtos
     [AutoMapFrom(typeof(User))]
     public class UserListDto: EntityDto
     {
-        public String FullName { get; set; }
+        public String UserName { get; set; }
+        public DateTime CreatedAt { get; set; }
         public String Gmail { get; set; }
         public String PhoneNumber { get; set; }
     }

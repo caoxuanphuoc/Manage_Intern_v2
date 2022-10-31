@@ -1,0 +1,42 @@
+﻿@using Manage_Intern_Version_2.Web.Models.User
+@model  CreateUserViewModel
+
+@section scripts
+    {
+    <environment names="Development">
+        <script src="~/js/views/users/create.js" asp-append-version="true"></script>
+    </environment>
+
+    <environment names="Staging,Production">
+        <script src="~/js/views/users/Create.min.js" asp-append-version="true"></script>
+    </environment>
+}
+
+    <h2>
+        @L("NewUser")
+    </h2>
+
+    <form id="UserCreationForm">
+
+        <div class="form-group">
+            <label for="UserName">@L("UserName")</label>
+            <input type="text" name="UserName" class="form-control" placeholder="@L("UserName")">
+        </div>
+
+        <div class="form-group">
+            <label for="PassWord">@L("PassWord")</label>
+            <input type="text" name="PassWord" class="form-control" placeholder="@L("PassWord")">
+        </div>
+        <div class="form-group">
+            <label for="ConfirmPassWord">@L("ConfirmPassWord")</label>
+            <input type="text" name="ConfirmPassWord" class="form-control" placeholder="@L("ConfirmPassWord")">
+        </div>
+
+        <div class="form-group">
+            <label for="Role">@L("Role")</label>
+            <input type="text" name="Role" class="form-control" placeholder="@L("Role")">
+        </div>
+
+        <button type="submit" class="btn btn-default">@L("Save")</button>
+
+    </form>

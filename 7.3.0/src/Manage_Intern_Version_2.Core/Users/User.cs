@@ -19,7 +19,7 @@ namespace Manage_Intern_Version_2.Users
         public string UserName { get; set; }
         [MaxLength(50)]
         public string PassWord { get; set; }
-        public int? Role { get; set; }
+        public int Role { get; set; }
 
         [MaxLength(50)]
         public string FullName { get; set; }
@@ -32,14 +32,23 @@ namespace Manage_Intern_Version_2.Users
         public string Gmail { get; set; }
         [MaxLength(100)]
         public string Address { get; set; }
-        public User(
-            string userName, string passWord, string fullName, string phoneNumber, string gmail)
+        public DateTime CreatedAt { get; set; }
+        public User( string userName, string passWord, string fullName, string phoneNumber, string gmail)
         {
             UserName = userName;
             PassWord = passWord;
             FullName = fullName;
             PhoneNumber = phoneNumber;
             Gmail = gmail;
+            CreatedAt = DateTime.Now;
         }
+        public User(string userName, string passWord,  int role)
+        {
+            UserName = userName;
+            PassWord = passWord;
+            Role = role;
+            CreatedAt = DateTime.Now;
+        }
+
     }
 }

@@ -14,16 +14,16 @@ namespace Manage_Intern_Version_2.Mentors
     public class Mentor : Entity
     {
         [ForeignKey("UserId")]
+        public int UserId { get; set; }
         public User User { get; set; }
         [Required]
         [MaxLength(50)]
         public string EmployeeCode { get; set; }
         [MaxLength(50)]
         public string DepartMent { get; set; }
-        public Mentor(string employeeCode, string departMent)
+        public Mentor(int id)
         {
-            EmployeeCode = employeeCode;
-            DepartMent = departMent;
+            UserId = id;
         }
     }
 }
