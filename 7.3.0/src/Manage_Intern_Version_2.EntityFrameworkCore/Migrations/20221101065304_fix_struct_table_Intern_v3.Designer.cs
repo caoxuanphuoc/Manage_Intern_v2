@@ -4,6 +4,7 @@ using Manage_Intern_Version_2.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Manage_Intern_Version_2.Migrations
 {
     [DbContext(typeof(Manage_Intern_Version_2DbContext))]
-    partial class Manage_Intern_Version_2DbContextModelSnapshot : ModelSnapshot
+    [Migration("20221101065304_fix_struct_table_Intern_v3")]
+    partial class fix_struct_table_Intern_v3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

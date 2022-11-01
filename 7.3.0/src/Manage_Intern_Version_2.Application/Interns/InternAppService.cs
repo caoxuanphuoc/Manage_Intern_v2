@@ -21,8 +21,11 @@ namespace Manage_Intern_Version_2.Interns
 
         public async System.Threading.Tasks.Task Create(CreateFromUserTable createFromUserTable)
         {
+          
             var intern = ObjectMapper.Map<Intern>(createFromUserTable);
             await _internRepository.InsertAsync(intern);
+            
+            
         }
     }
 }
